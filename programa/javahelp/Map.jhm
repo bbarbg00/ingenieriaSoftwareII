@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='ISO-8859-1' ?>
+<!DOCTYPE map
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp Map Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/map_1_0.dtd">
+ 
+<map version="1.0">
+        <mapID target="indice"  url="help/indice.htm" />
+
+        <mapID target="administrador"  url="help/administrador.htm" />
+           <mapID target="administrador.usuarios" url="help/administrador/usuarios.htm" />
+           <mapID target="administrador.cursos" url="help/administrador/cursos.htm" />
+           <mapID target="administrador.hacer_backup" url="help/administrador/hacer_backup.htm" />
+           <mapID target="administrador.restaurar_backup" url="help/administrador/restaurar_backup.htm" />
+
+        <mapID target="profesor"  url="help/profesor.htm" />
+           <mapID target="profesor.cursos" url="help/profesor/cursos.htm" />
+
+        <mapID target="alumno"  url="help/alumno.htm" />
+           <mapID target="alumno.notas" url="help/alumno/notas.htm" />
+           <mapID target="alumno.agenda" url="help/alumno/agenda.htm" />
+           <mapID target="alumno.tablon_anuncios" url="help/alumno/tablon_anuncios.htm" />
+</map>

@@ -1,0 +1,138 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<title>Creating a Help File - Stonefield Query SDK </title>
+	<meta name="generator" content="LibreOffice 4.2.8.2 (Linux)">
+	<meta name="created" content="0;0">
+	<meta name="changed" content="20160127;220654985046658">
+	<meta name="" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1">
+	<style type="text/css">
+	<!--
+		p { color: #000000 }
+		h3.cjk { font-family: "Droid Sans Fallback" }
+		h3.ctl { font-family: "FreeSans" }
+	-->
+	</style>
+</head>
+<body lang="en-US" text="#000000" dir="ltr" style="background: transparent">
+<p style="margin-bottom: 0in"><font size="4" style="font-size: 14pt"><b>Colegio
+– Menú de Ayuda</b></font></p>
+<p style="margin-bottom: 0in"><br>
+</p>
+<div id="body" dir="ltr">
+	<p><b>[NOTA]</b> <i>Esta ayuda está aun incompleta, al igual que la
+	aplicación. Se ofrece una sección de ayuda para cada una de las
+	funcionalidades desarrolladas.</i></p>
+	<p style="font-variant: normal; font-style: normal">La aplicación
+	ofrece tres menús en la barra superior de la ventana:
+	administrador, profesor y alumno.</p>
+	<p style="font-variant: normal; font-style: normal">Los menús
+	visibles, y por tanto las funcionalidades disponibles en la
+	aplicación, dependen de los roles permitidos al usuario con el que
+	se ha conectado a la misma.</p>
+	<p style="font-variant: normal; font-style: normal">Un mismo usuario
+	puede tener varios roles.</p>
+	<p style="font-variant: normal; font-style: normal">Si tiene alguna
+	duda o aprecia algún error con los roles que le han sido
+	atribuídos, por favor póngase en contacto con un administrador.</p>
+	<h3 class="western"><b>Índice de contenidos</b></h3>
+	<ul>
+		<li><p>Menú de administrador</p>
+		<ul>
+			<li><p>Usuarios</p>
+			<li><p>Cursos</p>
+			<li><p>Hacer backup</p>
+			<li><p>Restaurar backup</p>
+		</ul>
+		<li><p>Menú de profesor</p>
+		<ul>
+			<li><p>Cursos [NYI]</p>
+		</ul>
+		<li><p>Menú de alumno</p>
+		<ul>
+			<li><p>Notas [NYI]</p>
+			<li><p>Agenda [NYI]</p>
+			<li><p>Tablon de anuncios [NYI]</p>
+		</ul>
+	</ul>
+	<h3 class="western" style="page-break-before: always">Menú de
+	administrador</h3>
+	<p>Como administrador puede editar toda la información y datos
+	personales del resto de usuarios de la aplicación y de usted mismo.</p>
+	<p>También puede añadir usuarios nuevos, y borrar usuarios
+	existentes.</p>
+	<p>Desde el menú de cursos podrá crear, modificar y borrar cursos
+	[NYI]</p>
+	<p>También puede realizar backups completos del estado actual de la
+	base de datos y restaurar la base de datos actual a estados
+	anteriores utilizando estos ficheros.</p>
+	<p><b>Usuarios</b></p>
+	<p>El menú usuarios muestra una tabla con la información de todos
+	los usuarios registrados en la aplicación.</p>
+	<p>Puede editar y modificar los campos de los usuarios, sólo tiene
+	que hacer doble click sobre el campo a modificar. Al terminar de
+	moficar el campo, los cambios se almacenan automaticamente en la
+	base de datos externa.</p>
+	<p>Si hubiera algún problema con las modificaciones realizadas, se
+	le advertirá mediante una ventana popup.</p>
+	<p>Al botón derecho se despliega un menú emergente con tres
+	opciones: añadir nuevo usuario, borrar usuario seleccionado y
+	cambiar contraseña.</p>
+	<ul>
+		<li><p>Cada vez que seleccione añadir usuario, se añadirá una
+		nueva línea a la tabla, y podrá modificar los campos que desee.
+		En el momento que la línea contenga datos válidos, estos se
+		almacenarán de forma automática en la base de datos.</p>
+	</ul>
+	<p style="margin-left: 0.49in">Las líneas en blanco añadidas pero
+	no rellenadas o rellenadas con datos no válidos se ignoran y no se
+	añaden a la base de datos</p>
+	<ul>
+		<li><p>Respecto al borrado de usuarios, tenga en cuenta que no se
+		permite borrar al usuario que está actualmente conectado al
+		sistema.</p>
+		<li><p>Puede modificar la contraseña de cualquier usuario de la
+		aplicación, incluida la suya. 
+		</p>
+	</ul>
+	<p style="margin-left: 0.49in">Recuerde la contraseña introducida
+	ya que, por razones de seguridad, esta no se muestra ni almacena
+	nunca en la aplicación. 
+	</p>
+	<p style="margin-left: 0.49in">Las contraseñas sólo se almacenan
+	en la base de datos externa, y siempre encriptadas, por lo que si no
+	la recuerda no podrá recuperarla y tendrá que contactar con otro
+	administrador.</p>
+	<p><b>Cursos</b></p>
+	<p><b>[NYI]</b></p>
+	<p><b>Hacer backup</b></p>
+	<p style="font-weight: normal">Desde ese menú podrá realizar una
+	copia de seguridad de la base de datos actualmente en uso, con todas
+	sus tablas y los datos contenidos en las mismas.</p>
+	<p style="font-weight: normal">Debe seleccionar la ruta y el nombre
+	del fichero donde desea guardar el backup (asegúrese de que tiene
+	permisos de escritura en la ruta elegida).</p>
+	<p style="font-weight: normal">No es necesario que indique la
+	extensión del fichero (esta será añadida automaticamente).</p>
+	<p><b>Restaurar backup</b></p>
+	<p>Permite restaurar la base de datos a un estado anterior, con
+	todas sus tablas y los datos contenidos en las mismas.</p>
+	<p>Para ello, debe seleccionar un fichero de backup válido
+	(extensión .sql) que haya sido creado previamente con la
+	aplicación.</p>
+	<p><b>[AVISO] </b>Para poder concluir el proceso de restauración,
+	es necesario reiniciar la aplicación: esta se cerrará de forma
+	automática y deberá volver a arrancarla manualmente.</p>
+	<p>La próxima vez que arranque la aplicación, esta se habrá
+	actualizado con los datos del backup seleccionado.<script>
+		  initializeLayout();
+	 
+
+
+
+</script></p>
+</div>
+</body>
+</html>

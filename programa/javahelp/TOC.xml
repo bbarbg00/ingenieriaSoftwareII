@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='ISO-8859-1'  ?>
+<!DOCTYPE toc
+  PUBLIC "-//Sun Microsystems Inc.//DTD JavaHelp TOC Version 1.0//EN"
+         "http://java.sun.com/products/javahelp/toc_1_0.dtd">
+<toc version="1.0">
+<tocitem text="Colegio - Menu de ayuda">
+
+   <tocitem text="Indice" target="indice"/>
+
+   <tocitem text="Administrador" target="administrador"/>
+     <tocitem text="  -Usuarios" target="administrador.usuarios"/>
+     <tocitem text="  -Cursos" target="administrador.cursos"/>
+     <tocitem text="  -Hacer backup" target="administrador.hacer_backup"/>
+     <tocitem text="  -Restaurar backup" target="administrador.restaurar_backup"/>  
+
+   <tocitem text="Profesor" target="profesor"/>
+     <tocitem text="  -Cursos" target="profesor.cursos"/>
+
+   <tocitem text="Alumno" target="alumno"/>
+     <tocitem text="  -Notas" target="alumno.notas"/>
+     <tocitem text="  -Agenda" target="alumno.agenda"/>
+     <tocitem text="  -Tablon_anuncios" target="alumno.tablon_anuncios"/>
+ 
+</tocitem>
+</toc>
