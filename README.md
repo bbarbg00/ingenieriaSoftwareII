@@ -1,2 +1,7 @@
 # ingenieriaSoftwareII
-proyectoISII
+
+
+Compilacion + ejecucion
+-----------------------
+
+usar script compAndRun.sh
