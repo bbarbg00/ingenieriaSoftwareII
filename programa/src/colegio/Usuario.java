@@ -14,6 +14,7 @@ public class Usuario {
   protected boolean esAdministrador;
   protected boolean esProfesor;
   protected boolean esAlumno;
+  protected boolean esSecretario;
 
   // Solo para alumnos
   protected ArrayList<PaginaAgenda> agenda;
