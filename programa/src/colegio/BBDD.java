@@ -171,7 +171,9 @@ public class BBDD{
           queryResult.getString("direccion"),
           queryResult.getString("esAdministrador"),
           queryResult.getString("esProfesor"),
-          queryResult.getString("esAlumno"));
+          queryResult.getString("esAlumno"),
+	  queryResult.getString("esSecretario"),
+	  queryResult.getString("esEncargadoCocina"));
 
         // Imprimimos el usuario (para ver que lo ha cargado)
         //usuario.println();
@@ -530,7 +532,9 @@ public class BBDD{
     "'"     + usuario.getDireccion() + "'," +
     "'"     + booleanToIntString(usuario.getEsAdministrador()) + "'," +
     "'"     + booleanToIntString(usuario.getEsProfesor()) + "'," +
-    "'"     + booleanToIntString(usuario.getEsAlumno()) + "'"  +
+    "'"     + booleanToIntString(usuario.getEsAlumno()) + "'," +
+    "'"     + booleanToIntString(usuario.getEsSecretario()) + "'," +
+    "'"     + booleanToIntString(usuario.getEsEncargadoCocina()) + "'"  +
     ");";
 
     executeSQLUpdate(sqlQuery);
@@ -648,7 +652,9 @@ public class BBDD{
     "'"     + usuario.getDireccion() + "'," +
     "'"     + booleanToIntString(usuario.getEsAdministrador()) + "'," +
     "'"     + booleanToIntString(usuario.getEsProfesor()) + "'," +
-    "'"     + booleanToIntString(usuario.getEsAlumno()) + "'"  +
+    "'"     + booleanToIntString(usuario.getEsAlumno()) + "'," +
+    "'"     + booleanToIntString(usuario.getEsSecretario()) + "'," +
+    "'"     + booleanToIntString(usuario.getEsEncargadoCocina()) + "'"  +
     ");";*/
 
     executeSQLUpdate(sqlQuery);
@@ -683,6 +689,8 @@ public class BBDD{
           "esAdministrador BOOLEAN," +
           "esProfesor      BOOLEAN," +
           "esAlumno        BOOLEAN," +
+          "esSecretario    BOOLEAN," +
+          "esEncargadoCocina BOOLEAN," +
           "PRIMARY KEY (nif))"
         );
 
@@ -768,6 +776,8 @@ public class BBDD{
       "'sinemail@no.com'," +
       "'(+0033)611875632'," +
       "'sin direccion'," +
+      "'1'," +
+      "'1'," +
       "'1'," +
       "'1'," +
       "'1')";

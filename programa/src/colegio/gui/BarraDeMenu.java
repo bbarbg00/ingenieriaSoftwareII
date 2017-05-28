@@ -17,6 +17,8 @@ public class BarraDeMenu extends JMenuBar {
   private JMenu menuAdministrador;
   private JMenu menuProfesor;
   private JMenu menuAlumno;
+  private JMenu menuSecretario;
+  private JMenu menuEncargadoCocina;
 
   private JMenuItem menuItemDatosUsuario;
 
@@ -237,7 +239,7 @@ public class BarraDeMenu extends JMenuBar {
     // Menus para los diferentes tipos de usuario, a la izquierda
     // (inicialmente no seran visibles)
 
-    // Menu ADMINISTRADOR
+    // Menu ADMINISTRADOR ****************************************************
     menuAdministrador = new JMenu("Administrador");
     menuAdministrador.setIcon(new ImageIcon("../img/admin_small.png"));
 
@@ -287,8 +289,8 @@ public class BarraDeMenu extends JMenuBar {
 
     menuAdministrador.setVisible(false);
     this.add(menuAdministrador);
-
-    // Menu PROFESOR
+	
+    // Menu PROFESOR ****************************************************
     menuProfesor = new JMenu("Profesor");
     menuProfesor.setIcon(new ImageIcon("../img/profesor_small.png"));
 
@@ -306,7 +308,7 @@ public class BarraDeMenu extends JMenuBar {
     menuProfesor.setVisible(false);
     this.add(menuProfesor);
 
-    // Menu ALUMNO
+    // Menu ALUMNO ****************************************************
     menuAlumno = new JMenu("Alumno");
     menuAlumno.setIcon(new ImageIcon("../img/alumno_small.png"));
 
@@ -342,6 +344,37 @@ public class BarraDeMenu extends JMenuBar {
 
     menuAlumno.setVisible(false);
     this.add(menuAlumno);
+	
+    // Menu SECRETARIO ****************************************************
+    menuSecretario = new JMenu("Secretario");
+    menuSecretario.setIcon(new ImageIcon("../img/secretario_small.png"));
+
+    // Items del menu secretario
+    menuItem = new JMenuItem ("Usuarios");
+
+    menuItem.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+        
+        nombrePaginaAyudaActual = JAVAHELP_MENU_ADMINISTRADOR_USUARIOS;
+        ventanaEnLaQueEstaLaBarra.mostrarTablaUsuarios();
+        
+      }
+    });
+
+    menuSecretario.add(menuItem);
+ 
+    menuSecretario.setVisible(false);
+    this.add(menuSecretario);
+
+	
+	// Menu ENCARGADO DE COCINA *********************************************
+    menuEncargadoCocina = new JMenu("Cocina");
+    menuEncargadoCocina.setIcon(new ImageIcon("../img/chef_small.png"));
+
+    // Items del menu encargado de cocina
+	// NYI
+    menuEncargadoCocina.setVisible(false);
+    this.add(menuEncargadoCocina);
 
   }
 
@@ -354,6 +387,8 @@ public class BarraDeMenu extends JMenuBar {
       menuAdministrador.setVisible(usuarioActual.getEsAdministrador());
       menuProfesor.setVisible(usuarioActual.getEsProfesor());
       menuAlumno.setVisible(usuarioActual.getEsAlumno());
+	  menuSecretario.setVisible(usuarioActual.getEsSecretario());
+	  menuEncargadoCocina.setVisible(usuarioActual.getEsEncargadoCocina());
 
     }
 
@@ -371,8 +406,10 @@ public class BarraDeMenu extends JMenuBar {
   public void ocultarMenusDeUsuario() {
 
     menuAdministrador.setVisible(false);
-    menuProfesor.setVisible(false);
+	menuProfesor.setVisible(false);
     menuAlumno.setVisible(false);
+	menuSecretario.setVisible(false);
+	menuEncargadoCocina.setVisible(false);
 
     menuItemDatosUsuario.setText("");
 
