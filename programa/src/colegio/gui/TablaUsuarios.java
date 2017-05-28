@@ -23,7 +23,7 @@ public class TablaUsuarios extends Tabla {
     // DEBEN coincidir con el nombre de las columnas en la BBDD MySQL!  
     String cabecerasColumnas[] = 
       {"NIF","Nombre","Apellido1", "Apellido2", "Telefono", "Email", 
-             "Direccion", "EsAdministrador", "EsProfesor", "EsAlumno" };
+             "Direccion", "EsAdministrador", "EsProfesor", "EsAlumno", "esSecretario", "esEncargadoCocina"};
 
     // El segundo argumento, 0, es para que el numero de filas sea variable
     this.tableModel = new DefaultTableModel(cabecerasColumnas, 0);
@@ -170,7 +170,9 @@ public class TablaUsuarios extends Tabla {
          this.getValueAt(this.getSelectedRow(), 6).toString(),
          this.getValueAt(this.getSelectedRow(), 7).toString(),
          this.getValueAt(this.getSelectedRow(), 8).toString(),
-         this.getValueAt(this.getSelectedRow(), 9).toString());
+         this.getValueAt(this.getSelectedRow(), 9).toString(),
+         this.getValueAt(this.getSelectedRow(), 10).toString(),
+         this.getValueAt(this.getSelectedRow(), 11).toString());
       
       BBDD.insertarUsuario(nuevoUsuario);
 
@@ -198,7 +200,7 @@ public class TablaUsuarios extends Tabla {
     // los cargamos.
     int i = 0;
     Usuario usuario = null;
-    Object[] fila = {"", "", "", "", "", "", "", "", "", ""};
+    Object[] fila = {"", "", "", "", "", "", "", "", "", "", "", ""};
 
     while (i < listaUsuarios.size()) {
     
@@ -214,6 +216,8 @@ public class TablaUsuarios extends Tabla {
       fila[7] = Boolean.toString(usuario.getEsAdministrador());
       fila[8] = Boolean.toString(usuario.getEsProfesor());
       fila[9] = Boolean.toString(usuario.getEsAlumno());
+      fila[10] = Boolean.toString(usuario.getEsSecretario());
+      fila[11] = Boolean.toString(usuario.getEsEncargadoCocina());
 
       this.tableModel.addRow(fila);
 
@@ -226,7 +230,7 @@ public class TablaUsuarios extends Tabla {
   @Override
   protected void addFila() {
 
-    Object[] fila = {"", "", "", "", "", "", ""};
+    Object[] fila = {"", "", "", "", "", "", "", "", ""};
     tableModel.addRow(fila);
 
   }

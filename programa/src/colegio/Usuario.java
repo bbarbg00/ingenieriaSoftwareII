@@ -14,6 +14,8 @@ public class Usuario {
   protected boolean esAdministrador;
   protected boolean esProfesor;
   protected boolean esAlumno;
+  protected boolean esSecretario;
+  protected boolean esEncargadoCocina;
 
   // Solo para alumnos
   protected ArrayList<PaginaAgenda> agenda;
@@ -34,7 +36,9 @@ public class Usuario {
             String direccion,
             String esAdministrador,
             String esProfesor,
-            String esAlumno) {
+            String esAlumno,
+	        String esSecretario,
+	        String esEncargadoCocina) {
 
     this.setId(id);
     this.setNombre(nombre);
@@ -46,6 +50,8 @@ public class Usuario {
     this.setEsAdministrador(esAdministrador);
     this.setEsProfesor(esProfesor);
     this.setEsAlumno(esAlumno);
+    this.setEsSecretario(esSecretario);
+    this.setEsEncargadoCocina(esEncargadoCocina);
 
     if (this.getEsAlumno())
       agenda = new ArrayList<PaginaAgenda>();
@@ -91,6 +97,12 @@ public class Usuario {
     if (nombreEnMinusculas.equals("esalumno"))
       this.setEsAlumno(nuevoValor);
 
+    if (nombreEnMinusculas.equals("essecretario"))
+      this.setEsSecretario(nuevoValor);
+
+    if (nombreEnMinusculas.equals("esencargadococina"))
+      this.setEsEncargadoCocina(nuevoValor);
+
   }
 
   // Metodos get
@@ -128,6 +140,12 @@ public class Usuario {
 
     if (nombreEnMinusculas.equals("esalumno"))
       return BBDD.booleanToIntString(this.getEsAlumno());
+
+    if (nombreEnMinusculas.equals("essecretario"))
+      return BBDD.booleanToIntString(this.getEsSecretario());
+
+    if (nombreEnMinusculas.equals("esencargadococina"))
+      return BBDD.booleanToIntString(this.getEsEncargadoCocina());
    
     // si no es ninguno de los validos...
     return "";
@@ -197,6 +215,18 @@ public class Usuario {
   public boolean getEsAlumno() {
 
     return this.esAlumno;
+
+  }
+
+  public boolean getEsSecretario() {
+
+    return this.esSecretario;
+
+  }
+
+  public boolean getEsEncargadoCocina() {
+
+    return this.esEncargadoCocina;
 
   }
 
@@ -274,6 +304,18 @@ public class Usuario {
 
   }
 
+  public void setEsSecretario (boolean valor) {
+
+    this.esSecretario = valor;
+
+  }
+
+  public void setEsEncargadoCocina (boolean valor) {
+
+    this.esEncargadoCocina = valor;
+
+  }
+
   public void setEsAdministrador (String valor) {
 
     this.esAdministrador = false;
@@ -312,6 +354,38 @@ public class Usuario {
           (valor.equals("1"))) {
 
         this.setEsAlumno(true);
+      }
+
+    }
+
+  }
+
+  public void setEsSecretario (String valor) {
+
+    this.esSecretario = false;
+
+    if (valor != null) {
+
+      if ((valor.toLowerCase().equals("true")) ||
+          (valor.equals("1"))) {
+
+        this.setEsSecretario(true);
+      }
+
+    }
+
+  }
+
+  public void setEsEncargadoCocina (String valor) {
+
+    this.esEncargadoCocina = false;
+
+    if (valor != null) {
+
+      if ((valor.toLowerCase().equals("true")) ||
+          (valor.equals("1"))) {
+
+        this.setEsEncargadoCocina(true);
       }
 
     }
