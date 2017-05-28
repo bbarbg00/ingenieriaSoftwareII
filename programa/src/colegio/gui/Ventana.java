@@ -14,7 +14,7 @@ public class Ventana extends JFrame {
   // Estos son los componentes graficos que se muestran en el 
   // panel de contenido de la ventana:
 
-  // Tabla de usuarios (visible para administradores)
+  // Tabla de usuarios (visible para administradores y secretarios)
   public JScrollPane panelTablaUsuarios;
   private TablaUsuarios tablaUsuarios;
 
@@ -63,8 +63,8 @@ public class Ventana extends JFrame {
   public void cargarTablaUsuarios () {
   	
     // Tabla con todos los usuarios del Colegio (administradores,
-    // profesores y alumnos).
-    // Es visible para los usuarios que son administradores.
+    // secretarios, encargados de cocina, profesores y alumnos).
+    // Es visible para los usuarios que son administradores y secretarios.
   	this.tablaUsuarios = new TablaUsuarios(this);
     // lo que se mete en la ventana no es la tabla en si.
     // Se almacena un panel con barras de desplazamiento que la contiene.

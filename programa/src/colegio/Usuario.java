@@ -37,8 +37,8 @@ public class Usuario {
             String esAdministrador,
             String esProfesor,
             String esAlumno,
-	    String esSecretario,
-	    String esEncargadoCocina) {
+	        String esSecretario,
+	        String esEncargadoCocina) {
 
     this.setId(id);
     this.setNombre(nombre);

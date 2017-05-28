@@ -23,7 +23,7 @@ public class TablaUsuarios extends Tabla {
     // DEBEN coincidir con el nombre de las columnas en la BBDD MySQL!  
     String cabecerasColumnas[] = 
       {"NIF","Nombre","Apellido1", "Apellido2", "Telefono", "Email", 
-             "Direccion", "EsAdministrador", "EsProfesor", "EsAlumno" };
+             "Direccion", "EsAdministrador", "EsProfesor", "EsAlumno", "esSecretario", "esEncargadoCocina"};
 
     // El segundo argumento, 0, es para que el numero de filas sea variable
     this.tableModel = new DefaultTableModel(cabecerasColumnas, 0);
